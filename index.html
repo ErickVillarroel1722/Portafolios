@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi portafolio</title>
+  <style>
+    body {
+      background-image: url('https://static.vecteezy.com/system/resources/previews/021/430/779/non_2x/dark-blue-grainy-gradient-texture-background-advertising-website-copy-space-sky-wallpaper-for-app-web-design-webpages-banners-greeting-cards-landing-page-vector.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+    }
+    nav {
+      background-color: #000000;
+      padding: 10px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+    }
+    nav ul li a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      padding: 10px;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background-color: #1a1a1a;
+      border-radius: 0 0 10px 10px;
+    }
+    nav ul ul li {
+      display: block;
+    }
+    nav ul ul li a {
+      padding: 10px;
+    }
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .color-box {
+      background-color: #074ee6d2;
+      padding: 10px;
+      margin-bottom: 35px;
+      border-radius: 20px;
+      animation: color-box-animation 2s ease-in-out infinite alternate;
+    }
+    .toggle-box {
+      background-color: #1a1a1a;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 25px;
+      display: none;
+      position: relative;
+      animation: border-color-animation 2s ease-in-out infinite alternate;
+    }
+    .color-box:hover .toggle-box {
+      display: block;
+    }
+    @keyframes color-box-animation {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes border-color-animation {
+      0% {
+        border-color: #ff0000;
+      }
+      25% {
+        border-color: #00ff00;
+      }
+      50% {
+        border-color: #0000ff;
+      }
+      75% {
+        border-color: #ffff00;
+      }
+      100% {
+        border-color: #ff00ff;
+      }
+    }
+    .description {
+      font-size: 18px;
+    }
+    .font-size-option {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a>
+        <ul>
+          <li><a href="#">Subpágina 1</a></li>
+          <li><a href="#">Subpágina 2</a></li>
+          <li><a href="#">Subpágina 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Repositorio de Github</a>
+        <ul>
+          <li><a href="#">Subpágina 1</a></li>
+          <li><a href="#">Subpágina 2</a></li>
+          <li><a href="#">Subpágina 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contacto del Desarrollador</a>
+        <ul>
+          <li><a href="#">Subpágina 1</a></li>
+          <li><a href="#">Subpágina 2</a></li>
+          <li><a href="#">Subpágina 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <div class="color-box">
+    <h1>Erick Villarroel.</h1>
+    <h1>Desarrollador de Software.</h1>
+    <div class="toggle-box">
+      <p>Tengo 20 años y soy un desarrollador de Software con conocimiento en:</p>
+      <ul>
+        <li>Lenguaje Java.</li>
+        <li>Lenguaje C++.</li>
+        <li>Lenguaje Python.</li>
+        <li>Lenguaje HTML.</li>
+        <li>Desarrollo de Videojuegos.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="center">
+    <p>Trabajos Referenciales</p>
+  </div>
+  <div class="center">
+    <img src="Videojuego.1.0.jpeg" width="700" height="500">
+  </div> 
+  <p class="description">Aquí se muestra un breve avance de un proyecto donde se desarrolló un Videojuego usando enteramente Lenguaje Python, en colaboración con otros tres desarrolladores.</p>
+  <div class="center">
+    <img src="https://user-images.githubusercontent.com/117743333/246979257-8462974c-a427-47ff-91b4-7ed5d99a13b2.png" width="400" height="300">
+  </div>
+  <p class="description">Descripción de la segunda imagen.</p>
+  <div class="center font-size-option">
+    <label for="font-size">Tamaño de letra:</label>
+    <select id="font-size" onchange="changeFontSize(this.value)">
+      <option value="14px">Pequeño</option>
+      <option value="18px" selected>Mediano</option>
+      <option value="22px">Grande</option>
+    </select>
+  </div>
+  <script>
+    function changeFontSize(fontSize) {
+      var descriptions = document.getElementsByClassName("description");
+      for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].style.fontSize = fontSize;
+      }
+    }
+  </script>
+</body>
+</html>
